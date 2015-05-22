@@ -25,17 +25,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // self.tableView.delegate = self
         
         // Create example tasks
-        let task1:Dictionary<String, String> = ["task": "Study French", "subtask": "Verbs", "date": "01/14/2014"]
-        //println("task1 - task: \(task1["task"])")
-        println(task1["task"])
-        println(task1["subtask"])
-        println(task1["date"])
         
-        let task2:Dictionary<String, String> = ["task": "Eat Dinner", "subtask": "Burgers", "date": "01/14/2014"]
-        
-        let task3:Dictionary<String, String> = ["task": "Gym", "subtask": "Leg day", "date": "01/14/2014"]
+        let task1 = TaskModel(task: "Study German", subTask: "Verbs", date: "01/14/2014")
+        let task2 = TaskModel(task: "Eat Dinner", subTask: "Burgers", date: "01/14/2014")
 
-        taskArray = [task1, task2, task3]
+        taskArray = [task1, task2, TaskModel(task: "Gym", subTask: "Leg Day", date: "01/14/2014")]
         
         // refresh the information in the tableview - which calls both ancillary functions
         self.tableView.reloadData()
@@ -57,13 +51,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         println("Row: \(indexPath.row)")
         
-        let taskDict = taskArray[indexPath.row]
+        let thisTask = taskArray[indexPath.row]
         
         var cell: TaskCell = tableView.dequeueReusableCellWithIdentifier("myCell") as! TaskCell
         
-        cell.taskLabel.text = taskDict["task"]
-        cell.descriptionLabel.text = taskDict["subtask"]
-        cell.dateLabel.text = taskDict["date"]
+        cell.taskLabel.text = thisTask.task
+        cell.descriptionLabel.text = thisTask.subTask
+        cell.dateLabel.text = thisTask.date
         
         return cell
     }
