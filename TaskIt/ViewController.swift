@@ -40,6 +40,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+    }
 
     // UITableViewDataSource (required methods)
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -65,10 +69,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     // UITableViewDelegate required method
     func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
         
-        
         println("You tapped Row: \(indexPath.row), section: \(indexPath.section)")
+        
+        performSegueWithIdentifier("showTaskDetail", sender: self)
         
     }
 
 }
-
