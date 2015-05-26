@@ -26,10 +26,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         // Create example tasks
         
-        let task1 = TaskModel(task: "Study German", subTask: "Verbs", date: "01/14/2014")
-        let task2 = TaskModel(task: "Eat Dinner", subTask: "Burgers", date: "01/14/2014")
+        let date1 = Date.from(year: 2015, month: 5, day: 25)
+        let date2 = Date.from(year: 2015, month: 5, day: 26)
+        let date3 = Date.from(year: 2015, month: 5, day: 27)
+        
+        let task1 = TaskModel(task: "Study German", subTask: "Verbs", date: date1)
+        let task2 = TaskModel(task: "Eat Dinner", subTask: "Burgers", date: date2)
 
-        taskArray = [task1, task2, TaskModel(task: "Gym", subTask: "Leg Day", date: "01/14/2014")]
+        taskArray = [task1, task2, TaskModel(task: "Gym", subTask: "Leg Day", date: date3)]
         
         // refresh the information in the tableview - which calls both ancillary functions
         self.tableView.reloadData()
