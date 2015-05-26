@@ -85,7 +85,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Task" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3sA-qn-Mn5">
-                                <rect key="frame" x="16" y="80" width="280" height="30"/>
+                                <rect key="frame" x="16" y="81" width="280" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -103,6 +103,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="dueDatePicker" destination="MCt-hH-fum" id="njw-cJ-A9f"/>
+                        <outlet property="subtaskTextField" destination="MRR-oL-m2F" id="2qa-DY-lAq"/>
+                        <outlet property="taskTextField" destination="3sA-qn-Mn5" id="7gh-Bb-0A4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r1l-M3-Igk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
