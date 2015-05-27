@@ -103,6 +103,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="dueDatePicker" destination="MCt-hH-fum" id="njw-cJ-A9f"/>
                         <outlet property="subtaskTextField" destination="MRR-oL-m2F" id="2qa-DY-lAq"/>
